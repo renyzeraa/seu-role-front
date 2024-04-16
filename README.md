@@ -1,8 +1,73 @@
-# React + Vite
+# seurole\.com\.br
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Parte Front-end do site seu rolê
 
-Currently, two official plugins are available:
+## Fase 1: Planejamento
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Objetivos:**
+  Ser um gerenciador de eventos
+  Fazer marketing de eventos
+  Poder cadastrar um evento
+  Poder compra ingresso de evento
+  Whatsapp Marketing
+
+- **Objetivos Master (nós/criador site):**
+
+  - Editor (um usuário que so consiga fazer isso):
+    - [ ] Criar os faq's
+    - [ ] Criar notas
+
+- **Objetivos Admin (Dono Evento):**
+  Gerenciar sua conta (perfil)
+  Poder cadastrar um evento
+  Dashboard com os eventos dessa pessoa
+  **Acessando um evento**
+
+  - [ ] tera pessoas inscritas
+  - [ ] quanto ingressos pagos
+  - [ ] quantas pessoas
+  - [ ] ingressos a pagar
+
+  **Criar evento**
+
+  - [ ] Data Inicio e Fim
+  - [ ] Valor
+  - [ ] Variações (Area Vip, Etc)
+  - [ ] Nome
+  - [ ] Descrição
+  - [ ] Banner Evento
+  - [ ] Local e horários
+
+- **Objetivos Cliente/Usuário:**
+  Gerenciar sua conta (perfil)
+  Dashboard com eventos (ingresso que comprou)
+
+- **Objetivos Cliente/Usuário:**
+  O que é a seu role
+
+  - [ ] Missão, Visão, Valores
+        Faqs e duvidas
+        pagina principal divulgando alguns eventos
+
+- **Realizar pesquisas de mercado e análises de concorrência.**
+  - Sympla (Festa)
+  - e-inscrição (Curso / Palestra / Seminário)
+  - Ingresso Nacional (Somente venda de ingresso)
+
+## Fase 2: Análise de Requisitos
+
+## Fase 3: Design
+
+## Fase 4: Implementação/Codificação
+
+## Fase 5: Testes
+
+## Fase 6: Implantação/Implementação
+
+## Fase 7: Manutenção
+
+- [x] Logo
+- [ ] Domínio
+- [ ] Objetivos
+- [ ] Planejamento
+- [ ] Design
