@@ -2,6 +2,8 @@
 
 Parte Front-end do site seu rolê
 
+MinhaIdeia2024
+
 ## Fase 1: Planejamento
 
 - **Objetivos:**
@@ -16,19 +18,23 @@ Parte Front-end do site seu rolê
   - Editor (um usuário que so consiga fazer isso):
     - [ ] Criar os faq's
     - [ ] Criar notas
+  - CEO
+    - [ ] Faturamento
+    - [ ] Vendas / Leads e etc
 
 - **Objetivos Admin (Dono Evento):**
   Gerenciar sua conta (perfil)
   Poder cadastrar um evento
   Dashboard com os eventos dessa pessoa
-  **Acessando um evento**
+
+  - **Acessando um evento**
 
   - [ ] tera pessoas inscritas
   - [ ] quanto ingressos pagos
   - [ ] quantas pessoas
   - [ ] ingressos a pagar
 
-  **Criar evento**
+  - **Criar evento**
 
   - [ ] Data Inicio e Fim
   - [ ] Valor
@@ -46,8 +52,9 @@ Parte Front-end do site seu rolê
   O que é a seu role
 
   - [ ] Missão, Visão, Valores
-        Faqs e duvidas
-        pagina principal divulgando alguns eventos
+
+Faqs e duvidas
+pagina principal divulgando alguns eventos
 
 - **Realizar pesquisas de mercado e análises de concorrência.**
   - Sympla (Festa)
