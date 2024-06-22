@@ -1,4 +1,4 @@
-# Seu Rôle - BACKEND 🛒💾
+# Seu Rôle - FRONTEND 🛒💾
 
 [Site Oficial](seurole.com.br)
 
