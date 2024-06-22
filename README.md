@@ -1,8 +1,14 @@
-# seurole\.com\.br
+# Seu Rôle - BACKEND 🛒💾
 
-Parte Front-end do site seu rolê
+[Site Oficial](seurole.com.br)
 
-MinhaIdeia2024
+Front-end do site seu rolê, feito com React em Typescript
+
+Libs:
+
+- Vite
+- Shadcn/UI
+- Tailwind
 
 ## Fase 1: Planejamento
 
@@ -64,6 +70,32 @@ pagina principal divulgando alguns eventos
   - Ingresso Nacional (Somente venda de ingresso)
 
 ## Fase 2: Análise de Requisitos
+
+#### Qualquer pessoa
+
+- [ ] Tera acesso inicial na Home
+- [ ] Podera ver os eventos
+- [ ] Podera ver evento individualmente
+- [ ] Podera ver ingressos (valores e informações) do evento
+- [ ] Outras guias, ajuda, notas, sobre e etc.
+- [ ] Aparecer no cabeçalho
+- [ ] Comprar ingressos (login/cadastro de usuário normal)
+- [ ] Criar evento (login/cadastro de ger. evento)
+
+#### Usuário - TIPO 2/NORMAL
+
+- [ ] Área para cadastro
+  - [ ] Cadastro somente com cpf
+- [ ] Login com autenticação JWT
+- [ ] Área para atualizar cadastro
+  - [ ] Cpf não pode alterar
+- [ ] Somente este logado pode comprar ingresso
+- [ ] Área de pedidos/compras
+- [ ] Acessar a compra
+- [ ] Tera que aparecer a situação da compra
+- [ ] Pagamento tudo certo, tera que aparecer para imprimir os ingressos
+
+#### Ger Evento
 
 ## Fase 3: Design
 
