@@ -33,6 +33,8 @@ MinhaIdeia2024
   - [ ] quanto ingressos pagos
   - [ ] quantas pessoas
   - [ ] ingressos a pagar
+  - [ ] Dashboard
+  - [ ] Metricas vendas e tudo mais (com filtro e tabela)
 
   - **Criar evento**
 
@@ -78,3 +80,11 @@ pagina principal divulgando alguns eventos
 - [ ] Objetivos
 - [ ] Planejamento
 - [ ] Design
+
+  "axios": "^1.7.2",
+  "react": "^18.2.0",
+  "react-datalist-input": "^3.2.1",
+  "react-dom": "^18.2.0",
+  "react-input-mask": "^2.0.4",
+  "react-router-dom": "^6.23.1",
+  "react-toastify": "^10.0.5"
