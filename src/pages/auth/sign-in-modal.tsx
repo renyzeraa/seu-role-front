@@ -21,7 +21,7 @@ export function SignInModal() {
         </Button>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className='fixed inset-0 bg-black/70'>
+        <Dialog.Overlay className='fixed inset-0  z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'>
           <Dialog.Content className='fixed right-0 bottom-0 top-0 h-screen min-w-[400px] bg-muted-foreground border-l border-muted-foreground p-10 space-y-10'>
             <div className='space-y-3'>
               <Dialog.Title className='text-xl font-bold text-zinc-50 flex justify-between'>
