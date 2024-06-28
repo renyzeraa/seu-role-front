@@ -1,7 +1,8 @@
-import { CalendarPlus, User, UserPlus } from "lucide-react"
+import { CalendarPlus, UserPlus } from "lucide-react"
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { SignInModal } from "@/pages/auth/sign-in-modal";
 
 export function Header() {
   return (
@@ -23,10 +24,7 @@ export function Header() {
             <CalendarPlus size={20} className="mr-2" />
             Criar Evento
           </Button>
-          <Button variant="outline" className="bg-teal-900 border-none text-muted">
-            <User size={20} className="mr-2" />
-            Entrar
-          </Button>
+          <SignInModal />
         </div>
       </div>
     </header>

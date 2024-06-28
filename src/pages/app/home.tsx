@@ -1,8 +1,12 @@
+import { Header } from "@/components/header";
+import { Helmet } from "react-helmet-async";
 
 export function Home() {
   return (
-    <h1>
-      Hello World
-    </h1>
+    <section className="max-w-5xl mx-auto">
+      <Helmet title='Encontre aqui o evento que voçê deseja' />
+
+      <Header />
+    </section>
   )
 }
