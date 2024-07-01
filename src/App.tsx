@@ -6,10 +6,8 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 export function App() {
   return (
     <HelmetProvider>
-      <Helmet titleTemplate='%s | seu.role' />
-      <RouterProvider router={router}>
-
-      </RouterProvider>
+      <Helmet titleTemplate="%s | seu.role" />
+      <RouterProvider router={router}></RouterProvider>
     </HelmetProvider>
   )
 }

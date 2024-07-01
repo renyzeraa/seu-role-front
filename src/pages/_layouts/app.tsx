@@ -1,7 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom'
+import { Toaster } from 'sonner'
 
 export function AppLayout() {
   return (
-    <Outlet />
+    <>
+      <Toaster richColors />
+      <Outlet />
+    </>
   )
 }
