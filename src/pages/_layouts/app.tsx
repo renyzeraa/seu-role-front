@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom'
-import { Toaster } from 'sonner'
 
 export function AppLayout() {
   return (
     <>
-      <Toaster richColors />
+      <header>
+        <h1>App Layout</h1>
+      </header>
       <Outlet />
     </>
   )
