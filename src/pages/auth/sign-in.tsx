@@ -2,9 +2,10 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { LogIn, UserCheck } from 'lucide-react'
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
@@ -16,6 +17,10 @@ const signInForm = z.object({
 type SignInForm = z.infer<typeof signInForm>
 
 export function SignIn() {
+  const location = useLocation()
+  const { email } = location.state || {}
+  const [inputEmail] = useState(email ?? '')
+
   const {
     register,
     handleSubmit,
@@ -52,12 +57,13 @@ export function SignIn() {
             </p>
           </div>
 
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit(handleSignIn)} className="space-y-4">
             <div className="mb-4 space-y-2">
               <Label htmlFor="email">Seu e-mail</Label>
               <Input
                 type="email"
                 id="email"
+                defaultValue={inputEmail}
                 placeholder="Digite seu e-mail aqui"
                 {...register('email')}
                 onInvalid={getWarningEmailInvalid}
@@ -74,7 +80,6 @@ export function SignIn() {
               variant="default"
               className="w-full border-none text-muted"
               type="submit"
-              onSubmit={handleSubmit(handleSignIn)}
               disabled={isSubmitting}
             >
               <LogIn size={20} className="mr-2" />
