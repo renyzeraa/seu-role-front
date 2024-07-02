@@ -1,36 +1,37 @@
-import { CalendarPlus, UserPlus } from 'lucide-react'
+import { CalendarPlus, UserPlus, LogIn, Home } from 'lucide-react'
 import { Logo } from '@/components/logo'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { SignInModal } from '@/pages/auth/sign-in-modal'
+import { Separator } from './ui/separator'
+import { NavLink } from './nav-link'
+import { Link } from 'react-router-dom'
+import { ThemeToggle } from './theme/theme-toggle'
 
 export function Header() {
   return (
-    <header className="fixed left-0 w-full bg-teal-500">
-      <div className="mx-auto flex max-w-5xl items-center py-1">
-        <Logo className="mr-3" />
-        <Input
-          name="search"
-          title="Área de Pesquisa"
-          placeholder="Pesquise aqui pelo nome ou cidade do Evento"
-          className="max-w-96 font-semibold"
-        />
-        <div className="ml-auto flex items-center gap-3">
-          <Button
-            variant="outline"
-            className="border-none bg-teal-900 text-muted"
-          >
-            <UserPlus size={20} className="mr-2" />
-            Cadastrar-se
-          </Button>
-          <Button
-            variant="outline"
-            className="border-none bg-teal-900 text-muted"
-          >
+    <header className="fixed left-0 w-full border-b bg-muted dark:border-none">
+      <div className="mx-auto flex h-16 max-w-5xl items-center gap-4 px-6">
+        <Link to="/">
+          <Logo />
+        </Link>
+        <Separator orientation="vertical" className="h-8 bg-muted-foreground" />
+        <nav className="flex items-center space-x-2 lg:space-x-4">
+          <NavLink to="/">
+            <Home size={20} /> Início
+          </NavLink>
+          <NavLink to="/create-manager" title="Crie já seu Evento">
             <CalendarPlus size={20} className="mr-2" />
             Criar Evento
-          </Button>
-          <SignInModal />
+          </NavLink>
+          <NavLink to="/sign-up" title="Criar conta grátis">
+            <UserPlus size={20} className="mr-2" />
+            Cadastrar-se
+          </NavLink>
+          <NavLink to="/sign-in" title="Entre com sua conta">
+            <LogIn size={20} className="mr-2" />
+            Entrar
+          </NavLink>
+        </nav>
+        <div className="ml-auto" title="Trocar tema para Claro ou Escuro">
+          <ThemeToggle />
         </div>
       </div>
     </header>

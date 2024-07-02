@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { validateCPF } from '@/utils/validateCpf'
-import { LogIn, UserPlus } from 'lucide-react'
+import { Home, LogIn, UserPlus } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
@@ -57,10 +57,16 @@ export function SignUp() {
     <>
       <Helmet title="Cadastro" />
       <div className="p-8">
-        <Button variant="comum" asChild className="absolute right-8 top-8">
+        <Button variant="comum" asChild className="absolute right-36 top-8">
           <Link to="/sign-in">
             <LogIn size={20} className="mr-2" />
             Realizar Login
+          </Link>
+        </Button>
+        <Button variant="comum" asChild className="absolute right-8 top-8">
+          <Link to="/">
+            <Home size={20} className="mr-2" />
+            Início
           </Link>
         </Button>
         <div className="flex w-[360px] flex-col justify-center gap-6">
@@ -69,7 +75,7 @@ export function SignUp() {
               Criar conta grátis
             </h1>
             <p className="text-sm text-muted-foreground">
-              Compre ingressos com empresa mais rapida do Brasil !
+              Compre ingressos com a empresa mais rapida do Brasil !
             </p>
           </div>
 

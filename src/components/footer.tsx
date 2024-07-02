@@ -1,0 +1,74 @@
+import { Logo } from './logo'
+import { Separator } from './ui/separator'
+import { NavLink } from './nav-link'
+import { Facebook, Instagram, Twitter } from 'lucide-react'
+
+export function Footer() {
+  return (
+    <footer className="w-full bg-muted">
+      <div className="mx-auto max-w-5xl px-8">
+        <div className="my-3 flex items-center justify-between">
+          <Logo />
+          <nav className="flex items-center gap-2">
+            <NavLink to="" title="Instagram">
+              <Instagram size={20} />
+            </NavLink>
+            <NavLink to="" title="Facebook">
+              <Facebook size={20} />
+            </NavLink>
+            <NavLink to="" title="Twitter">
+              <Twitter size={20} />
+            </NavLink>
+          </nav>
+        </div>
+        <Separator className="bg-muted-foreground" />
+        <div className="m-4 flex items-start justify-center gap-8">
+          <ul>
+            <li>
+              <NavLink to="/sobre">Sobre</NavLink>
+            </li>
+            <li>
+              <NavLink to="/empresa">Empresa</NavLink>
+            </li>
+            <li>
+              <NavLink to="/valores">Valores</NavLink>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <NavLink to="/termos-servico">Termos de Serviço</NavLink>
+            </li>
+            <li>
+              <NavLink to="/politicas-privacidade">
+                Políticas de privacidade
+              </NavLink>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <NavLink data-current={false} to="/">
+                Inicio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/rock">Rock</NavLink>
+            </li>
+            <li>
+              <NavLink to="/eletronica">Pop</NavLink>
+            </li>
+            <li>
+              <NavLink to="/sertanejo">Sertanejo</NavLink>
+            </li>
+            <li>
+              <NavLink to="/pagode">Pagode</NavLink>
+            </li>
+          </ul>
+        </div>
+        <Separator className="bg-muted-foreground" />
+        <span className="block w-[100%] py-1 text-center text-[0.8rem] font-semibold">
+          &#169; Seu Role LTDA - Todos os direitos reservados
+        </span>
+      </div>
+    </footer>
+  )
+}

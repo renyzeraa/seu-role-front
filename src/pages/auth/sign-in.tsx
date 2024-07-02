@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { LogIn, UserCheck } from 'lucide-react'
+import { Home, LogIn, UserCheck } from 'lucide-react'
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
@@ -41,10 +41,16 @@ export function SignIn() {
     <>
       <Helmet title="Login" />
       <div className="p-8">
-        <Button variant="comum" asChild className="absolute right-8 top-8">
+        <Button variant="comum" asChild className="absolute right-36 top-8">
           <Link to="/sign-up">
             <UserCheck size={20} className="mr-2" />
             Cadastrar-se
+          </Link>
+        </Button>
+        <Button variant="comum" asChild className="absolute right-8 top-8">
+          <Link to="/">
+            <Home size={20} className="mr-2" />
+            Início
           </Link>
         </Button>
         <div className="flex w-[360px] flex-col justify-center gap-6">
