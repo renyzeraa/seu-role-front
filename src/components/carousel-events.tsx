@@ -7,10 +7,15 @@ import {
 } from '@/components/ui/carousel'
 import { MiniCardEvent } from './mini-card-event'
 
-export function CarouselEvent() {
+interface CarpuselEventProps {
+  title: string
+  data?: any
+}
+
+export function CarouselEvent({ title }: CarpuselEventProps) {
   return (
     <>
-      <h1 className="text-3xl font-semibold">Novidades</h1>
+      <h1 className="text-3xl font-semibold">{title}</h1>
       <Carousel className="mx-12 my-2">
         <CarouselContent className="p-2">
           <CarouselItem className="basis-1/3">

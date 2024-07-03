@@ -1,11 +1,14 @@
 import { CarouselEvent } from '@/components/carousel-events'
+import { Separator } from '@/components/ui/separator'
 import { Helmet } from 'react-helmet-async'
 
 export function Home() {
   return (
-    <div className="">
+    <div>
       <Helmet title="Encontre aqui o evento que voçê deseja" />
-      <CarouselEvent></CarouselEvent>
+      <CarouselEvent title="Novidades"></CarouselEvent>
+      <Separator className="my-6" />
+      <CarouselEvent title="Mais Buscados"></CarouselEvent>
     </div>
   )
 }

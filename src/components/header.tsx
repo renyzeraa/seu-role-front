@@ -8,7 +8,7 @@ import { AccountMenu } from './account-menu'
 
 export function Header() {
   return (
-    <header className="fixed left-0 w-full border-b bg-muted dark:border-none">
+    <header className="fixed left-0 z-10 w-full border-b bg-muted dark:border-none">
       <div className="mx-auto flex h-16 max-w-5xl items-center gap-4 px-6">
         <Link to="/">
           <Logo />
