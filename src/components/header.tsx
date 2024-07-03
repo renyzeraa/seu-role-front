@@ -4,6 +4,7 @@ import { Separator } from './ui/separator'
 import { NavLink } from './nav-link'
 import { Link } from 'react-router-dom'
 import { ThemeToggle } from './theme/theme-toggle'
+import { AccountMenu } from './account-menu'
 
 export function Header() {
   return (
@@ -30,8 +31,12 @@ export function Header() {
             Entrar
           </NavLink>
         </nav>
-        <div className="ml-auto" title="Trocar tema para Claro ou Escuro">
+        <div
+          className="ml-auto flex items-center gap-1.5"
+          title="Trocar tema para Claro ou Escuro"
+        >
           <ThemeToggle />
+          <AccountMenu />
         </div>
       </div>
     </header>
