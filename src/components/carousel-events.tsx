@@ -6,6 +6,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 import { MiniCardEvent } from './mini-card-event'
+import { formatDate } from '@/utils/formatDate'
 
 interface EventData {
   tituloEvento: string
@@ -32,7 +33,7 @@ export function CarouselEvent({ data, title }: CarpuselEventProps) {
                 tituloEvento={tituloEvento}
                 banner={banner}
                 location={location}
-                dataEvento={dataEvento}
+                dataEvento={formatDate(dataEvento)}
                 id={id}
               />
             </CarouselItem>

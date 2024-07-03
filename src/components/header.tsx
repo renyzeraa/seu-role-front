@@ -19,15 +19,15 @@ export function Header() {
             <Home size={20} /> Início
           </NavLink>
           <NavLink to="/create-manager" title="Crie já seu Evento">
-            <CalendarPlus size={20} className="mr-2" />
+            <CalendarPlus size={20} />
             Criar Evento
           </NavLink>
           <NavLink to="/sign-up" title="Criar conta grátis">
-            <UserPlus size={20} className="mr-2" />
+            <UserPlus size={20} />
             Cadastrar-se
           </NavLink>
           <NavLink to="/sign-in" title="Entre com sua conta">
-            <LogIn size={20} className="mr-2" />
+            <LogIn size={20} />
             Entrar
           </NavLink>
         </nav>
