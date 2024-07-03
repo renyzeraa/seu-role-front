@@ -1,16 +1,19 @@
 interface InputTextProps extends React.ComponentProps<'input'> {
-  icon?: React.ReactNode;
+  icon?: React.ReactNode
 }
 
 export function InputText({ icon, ...props }: InputTextProps) {
-  const hasIcon = !!icon;
+  const hasIcon = !!icon
 
   return (
-    <div className="flex items-center relative">
+    <div className="relative flex items-center">
       {hasIcon && icon}
       <input
         type="text"
-        className={"ml-3 p-2 rounded-md text-gray-900 outline-none text-base w-96 font-medium" + (hasIcon ? " pl-9" : "")}
+        className={
+          'ml-3 w-96 rounded-md p-2 text-base font-medium text-gray-900 outline-none' +
+          (hasIcon ? ' pl-9' : '')
+        }
         {...props}
       />
     </div>

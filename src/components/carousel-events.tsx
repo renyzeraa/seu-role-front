@@ -7,67 +7,36 @@ import {
 } from '@/components/ui/carousel'
 import { MiniCardEvent } from './mini-card-event'
 
-interface CarpuselEventProps {
-  title: string
-  data?: any
+interface EventData {
+  tituloEvento: string
+  banner: string
+  location: string
+  dataEvento: string
+  id: string
 }
 
-export function CarouselEvent({ title }: CarpuselEventProps) {
+interface CarpuselEventProps {
+  title: string
+  data: EventData[]
+}
+
+export function CarouselEvent({ data, title }: CarpuselEventProps) {
   return (
     <>
       <h1 className="text-3xl font-semibold">{title}</h1>
       <Carousel className="mx-12 my-2">
         <CarouselContent className="p-2">
-          <CarouselItem className="basis-1/3">
-            <MiniCardEvent
-              title="Together We RISE"
-              banner="../../temp/banner-exemplo.jpeg"
-              key="text-1"
-              location=" Avenida Governador Jorge Lacerda, Nº 2900 - Balneario Camboriu"
-              data="SAB, 06 Julho - 15:30"
-              id="a9dasjda99wjdaw0-a-das-da"
-            />
-          </CarouselItem>
-          <CarouselItem className="basis-1/3">
-            <MiniCardEvent
-              title="Together We RISE"
-              banner="../../temp/banner-exemplo.jpeg"
-              key="text-1"
-              location=" Avenida Governador Jorge Lacerda, Nº 2900 - Balneario Camboriu"
-              data="SAB, 06 Julho - 15:30"
-              id="a9dasjda99wjdaw0-a-das-da"
-            />
-          </CarouselItem>
-          <CarouselItem className="basis-1/3">
-            <MiniCardEvent
-              title="Together We RISE"
-              banner="../../temp/banner-exemplo.jpeg"
-              key="text-1"
-              location=" Avenida Governador Jorge Lacerda, Nº 2900 - Balneario Camboriu"
-              data="SAB, 06 Julho - 15:30"
-              id="a9dasjda99wjdaw0-a-das-da"
-            />
-          </CarouselItem>
-          <CarouselItem className="basis-1/3">
-            <MiniCardEvent
-              title="Together We RISE"
-              banner="../../temp/banner-exemplo.jpeg"
-              key="text-1"
-              location=" Avenida Governador Jorge Lacerda, Nº 2900 - Balneario Camboriu"
-              data="SAB, 06 Julho - 15:30"
-              id="a9dasjda99wjdaw0-a-das-da"
-            />
-          </CarouselItem>
-          <CarouselItem className="basis-1/3">
-            <MiniCardEvent
-              title="Together We RISE"
-              banner="../../temp/banner-exemplo.jpeg"
-              key="text-1"
-              location=" Avenida Governador Jorge Lacerda, Nº 2900 - Balneario Camboriu"
-              data="SAB, 06 Julho - 15:30"
-              id="a9dasjda99wjdaw0-a-das-da"
-            />
-          </CarouselItem>
+          {data.map(({ banner, dataEvento, id, location, tituloEvento }) => (
+            <CarouselItem key={id} className="basis-1/3" title="Acessar Evento">
+              <MiniCardEvent
+                tituloEvento={tituloEvento}
+                banner={banner}
+                location={location}
+                dataEvento={dataEvento}
+                id={id}
+              />
+            </CarouselItem>
+          ))}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
