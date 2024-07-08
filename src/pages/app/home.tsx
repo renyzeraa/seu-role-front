@@ -1,4 +1,3 @@
-import { CarouselEvent } from '@/components/carousel-events'
 import { Separator } from '@/components/ui/separator'
 import { Helmet } from 'react-helmet-async'
 
@@ -9,6 +8,8 @@ export function Home() {
       {/* <CarouselEvent title="Novidades"></CarouselEvent> */}
       <Separator className="my-6" />
       {/* <CarouselEvent title="Mais Buscados"></CarouselEvent> */}
+      {/* <BigCardEvent></BigCardEvent> */}
+      {/* <BigCarouselEvent title="Em destaque"></BigCarouselEvent> */}
     </div>
   )
 }

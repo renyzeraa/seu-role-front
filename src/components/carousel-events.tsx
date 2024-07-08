@@ -7,18 +7,11 @@ import {
 } from '@/components/ui/carousel'
 import { MiniCardEvent } from './mini-card-event'
 import { formatDate } from '@/utils/formatDate'
-
-interface EventData {
-  tituloEvento: string
-  banner: string
-  location: string
-  dataEvento: string
-  id: string
-}
+import { MiniEventData } from '@/@types/global'
 
 interface CarpuselEventProps {
   title: string
-  data: EventData[]
+  data: MiniEventData[]
 }
 
 export function CarouselEvent({ data, title }: CarpuselEventProps) {

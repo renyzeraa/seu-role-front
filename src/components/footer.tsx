@@ -1,14 +1,22 @@
-import { Logo } from './logo'
 import { Separator } from './ui/separator'
 import { NavLink } from './nav-link'
 import { Facebook, Instagram, Twitter } from 'lucide-react'
+import { LogoBlack } from './logo-black'
+import { Logo } from './logo'
+import { useTheme } from './theme/theme-provider'
 
 export function Footer() {
+  const { theme } = useTheme()
+
   return (
     <footer className="w-full bg-muted">
-      <div className="mx-auto max-w-5xl px-8">
+      <div className="max-w-8xl mx-auto px-8">
         <div className="my-3 flex items-center justify-between">
-          <Logo />
+          {theme === 'light' ? (
+            <LogoBlack />
+          ) : (
+            <Logo className="h-[50px] w-[50px]" />
+          )}
           <nav className="flex items-center gap-2">
             <NavLink to="" title="Instagram">
               <Instagram size={20} />

@@ -1,17 +1,25 @@
 import { CalendarPlus, UserPlus, LogIn, Home } from 'lucide-react'
-import { Logo } from '@/components/logo'
 import { Separator } from './ui/separator'
 import { NavLink } from './nav-link'
 import { Link } from 'react-router-dom'
 import { ThemeToggle } from './theme/theme-toggle'
 import { AccountMenu } from './account-menu'
+import { LogoBlack } from './logo-black'
+import { useTheme } from './theme/theme-provider'
+import { Logo } from './logo'
 
 export function Header() {
+  const { theme } = useTheme()
+
   return (
     <header className="fixed left-0 z-10 w-full border-b bg-muted dark:border-none">
-      <div className="mx-auto flex h-16 max-w-5xl items-center gap-4 px-6">
+      <div className="max-w-8xl mx-auto flex h-16 items-center gap-4 px-6">
         <Link to="/">
-          <Logo />
+          {theme === 'light' ? (
+            <LogoBlack />
+          ) : (
+            <Logo className="h-[50px] w-[50px]" />
+          )}
         </Link>
         <Separator orientation="vertical" className="h-8 bg-muted-foreground" />
         <nav className="flex items-center space-x-2 lg:space-x-4">
