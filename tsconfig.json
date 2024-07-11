@@ -23,7 +23,8 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      "@tinymce/tinymce-react": ["node_modules/@tinymce/tinymce-react/dist/main/ts/index.d.ts"]
     }
   },
   "include": ["src"],

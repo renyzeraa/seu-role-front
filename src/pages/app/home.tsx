@@ -1,4 +1,7 @@
+import { MapComponent } from '@/components/ui/location-marker'
 import { Separator } from '@/components/ui/separator'
+import { LatLng } from 'leaflet'
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 export function Home() {
