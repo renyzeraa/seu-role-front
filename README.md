@@ -10,66 +10,38 @@ Libs:
 - Shadcn/UI
 - Tailwind
 
-## Fase 1: Planejamento
+---
 
-- **Objetivos:**
-  Ser um gerenciador de eventos
-  Fazer marketing de eventos
-  Poder cadastrar um evento
-  Poder compra ingresso de evento
-  Whatsapp Marketing
+### Para executar o projeto:
 
-- **Objetivos Master (nós/criador site):**
+1. Clonar este repositório
+2. Acessando o local onde fez o clone
 
-  - Editor (um usuário que so consiga fazer isso):
-    - [ ] Criar os faq's
-    - [ ] Criar notas
-  - CEO
-    - [ ] Faturamento
-    - [ ] Vendas / Leads e etc
+```bash
+#instalar dependencias
+npm install
+```
 
-- **Objetivos Admin (Dono Evento):**
-  Gerenciar sua conta (perfil)
-  Poder cadastrar um evento
-  Dashboard com os eventos dessa pessoa
+3. Para rodar local
 
-  - **Acessando um evento**
+```bash
+npm run dev
+```
 
-  - [ ] tera pessoas inscritas
-  - [ ] quanto ingressos pagos
-  - [ ] quantas pessoas
-  - [ ] ingressos a pagar
-  - [ ] Dashboard
-  - [ ] Metricas vendas e tudo mais (com filtro e tabela)
+### Sobre
 
-  - **Criar evento**
+1. Objetivos gerais
 
-  - [ ] Data Inicio e Fim
-  - [ ] Valor
-  - [ ] Variações (Area Vip, Etc)
-  - [ ] Nome
-  - [ ] Descrição
-  - [ ] Banner Evento
-  - [ ] Local e horários
+- [x] Feito em React e template Vite
+- [x] Em typescript
+- [x] Shadcn/UI para os componentes
+- [x] Tailwind para estilos
+- [x] Separar componentes de paginas e tipos etc
+- [ ] Consumir backend ja criado
+- [ ] Realizar login e autenticação
+- [ ] Estados com zustand ou algo relacionado
 
-- **Objetivos Cliente/Usuário:**
-  Gerenciar sua conta (perfil)
-  Dashboard com eventos (ingresso que comprou)
-
-- **Objetivos Cliente/Usuário:**
-  O que é a seu role
-
-  - [ ] Missão, Visão, Valores
-
-Faqs e duvidas
-pagina principal divulgando alguns eventos
-
-- **Realizar pesquisas de mercado e análises de concorrência.**
-  - Sympla (Festa)
-  - e-inscrição (Curso / Palestra / Seminário)
-  - Ingresso Nacional (Somente venda de ingresso)
-
-## Fase 2: Análise de Requisitos
+### Análise de Requisitos
 
 #### Qualquer pessoa
 
@@ -96,27 +68,3 @@ pagina principal divulgando alguns eventos
 - [ ] Pagamento tudo certo, tera que aparecer para imprimir os ingressos
 
 #### Ger Evento
-
-## Fase 3: Design
-
-## Fase 4: Implementação/Codificação
-
-## Fase 5: Testes
-
-## Fase 6: Implantação/Implementação
-
-## Fase 7: Manutenção
-
-- [x] Logo
-- [x] Domínio
-- [ ] Objetivos
-- [ ] Planejamento
-- [ ] Design
-
-  "axios": "^1.7.2",
-  "react": "^18.2.0",
-  "react-datalist-input": "^3.2.1",
-  "react-dom": "^18.2.0",
-  "react-input-mask": "^2.0.4",
-  "react-router-dom": "^6.23.1",
-  "react-toastify": "^10.0.5"
