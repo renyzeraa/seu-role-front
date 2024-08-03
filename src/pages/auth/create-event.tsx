@@ -44,9 +44,9 @@ export function CreateEvent() {
     console.log(data)
   }
 
-  function handleSendIngressosSubmit(data: CreateEventForm) {
-    console.log(data)
-  }
+  // function handleSendIngressosSubmit(data: CreateEventForm) {
+  //   console.log(data)
+  // }
 
   return (
     <div>

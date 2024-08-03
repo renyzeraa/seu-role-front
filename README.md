@@ -37,6 +37,7 @@ npm run dev
 - [x] Shadcn/UI para os componentes
 - [x] Tailwind para estilos
 - [x] Separar componentes de paginas e tipos etc
+- [ ] Gerenciamento de estados e valores com Zustand
 - [ ] Consumir backend ja criado
 - [ ] Realizar login e autenticação
 - [ ] Estados com zustand ou algo relacionado
