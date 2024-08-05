@@ -1,6 +1,14 @@
+import { signUp } from '@/api/sign-up'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import { Home, LogIn, UserPlus } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
@@ -12,7 +20,9 @@ const signUpForm = z.object({
   email: z.string().email(),
   senha: z.string().min(6),
   nome: z.string(),
-  cpf_cnpj: z.string().regex(/^\d{11}$/),
+  cpfCnpj: z.string().regex(/^\d{11}$/),
+  genero: z.string(),
+  tipo: z.enum(['NORMAL']),
   // .refine((value) => validateCPF(value)), @TODO colocar validação depois
   telefone: z.string(),
 })
@@ -25,22 +35,18 @@ export function SignUp() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { isSubmitting },
   } = useForm<SignUpForm>()
 
   async function handleSignUp(data: SignUpForm) {
-    console.log(data)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    data.tipo = 'NORMAL'
     try {
-      toast.success('Cadastro realizado com sucesso!', {
-        action: {
-          label: 'Login',
-          onClick: () =>
-            navigate('/sign-in', {
-              state: {
-                email: data.email,
-              },
-            }),
+      await signUp(data)
+      toast.success('Cadastro realizado com sucesso!')
+      navigate('/sign-in', {
+        state: {
+          email: data.email,
         },
       })
     } catch {
@@ -88,12 +94,12 @@ export function SignUp() {
                 {...register('nome')}
                 required
               ></Input>
-              <Label htmlFor="cpf_cnpj">CPF (sem pontuação)</Label>
+              <Label htmlFor="cpfCnpj">CPF (sem pontuação)</Label>
               <Input
                 type="text"
-                id="cpf_cnpj"
+                id="cpfCnpj"
                 placeholder="123.000.123-00"
-                {...register('cpf_cnpj')}
+                {...register('cpfCnpj')}
                 required
               ></Input>
               <Label htmlFor="email">E-mail</Label>
@@ -105,6 +111,27 @@ export function SignUp() {
                 onInvalid={getWarningEmailInvalid}
                 required
               ></Input>
+              <Label htmlFor="genero">Genêro</Label>
+              <Select onValueChange={(value) => setValue('genero', value)}>
+                <SelectTrigger>
+                  <SelectValue placeholder="selecione..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="MASCULINO">Masculino</SelectItem>
+                  <SelectItem value="FEMININO">Feminino</SelectItem>
+                  <SelectItem value="NAO_BINARIO">Não Binário</SelectItem>
+                  <SelectItem value="GENERO_FLUIDO">Genêro Fluído</SelectItem>
+                  <SelectItem value="TRANSGENERO">Transgenêro</SelectItem>
+                  <SelectItem value="AGENERO">Agenêro</SelectItem>
+                  <SelectItem value="BIGENERO">Bigenêro</SelectItem>
+                  <SelectItem value="PANGENERO">Pangenêro</SelectItem>
+                  <SelectItem value="NEUTROIS">Neutróis</SelectItem>
+                  <SelectItem value="TWO_SPIRIT">Two Spirit</SelectItem>
+                  <SelectItem value="HIJRA">Hijra</SelectItem>
+                  <SelectItem value="TRAVESTI">Travesti</SelectItem>
+                  <SelectItem value="OUTRO">Outro</SelectItem>
+                </SelectContent>
+              </Select>
               <Label htmlFor="telefone">Telefone</Label>
               <Input
                 type="text"
