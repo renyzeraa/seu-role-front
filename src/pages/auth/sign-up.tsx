@@ -9,9 +9,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import InputMask from 'react-input-mask'
 import { Home, LogIn, UserPlus } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
@@ -37,6 +38,7 @@ export function SignUp() {
     handleSubmit,
     setValue,
     formState: { isSubmitting },
+    control,
   } = useForm<SignUpForm>()
 
   async function handleSignUp(data: SignUpForm) {
@@ -95,13 +97,23 @@ export function SignUp() {
                 required
               ></Input>
               <Label htmlFor="cpfCnpj">CPF (sem pontuação)</Label>
-              <Input
-                type="text"
-                id="cpfCnpj"
-                placeholder="123.000.123-00"
-                {...register('cpfCnpj')}
-                required
-              ></Input>
+              <Controller
+                name="cpfCnpj"
+                control={control}
+                render={({ field }) => (
+                  <InputMask
+                    {...field}
+                    mask="999.999.999-99"
+                    id="cpfCnpj"
+                    placeholder="123.000.123-00"
+                    onChange={({ target }) =>
+                      setValue('cpfCnpj', target.value.replace(/[.-]/g, ''))
+                    }
+                    className="flex h-12 w-full rounded-md border border-input bg-background px-2 py-4 font-sans text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    required
+                  ></InputMask>
+                )}
+              />
               <Label htmlFor="email">E-mail</Label>
               <Input
                 type="email"
