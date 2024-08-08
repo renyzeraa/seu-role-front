@@ -6,5 +6,5 @@ export interface SignInBody {
 }
 
 export async function signIn({ email, senha }: SignInBody) {
-  await api.post('/login', { email, senha })
+  return await api.post('/login', { email, senha })
 }

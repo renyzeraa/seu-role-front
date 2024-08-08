@@ -124,7 +124,10 @@ export function SignUp() {
                 required
               ></Input>
               <Label htmlFor="genero">Genêro</Label>
-              <Select onValueChange={(value) => setValue('genero', value)}>
+              <Select
+                required
+                onValueChange={(value) => setValue('genero', value)}
+              >
                 <SelectTrigger>
                   <SelectValue placeholder="selecione..." />
                 </SelectTrigger>

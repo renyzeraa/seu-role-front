@@ -19,7 +19,7 @@ export async function signUp({
   telefone,
   genero,
 }: SignInBody) {
-  await api.post('/usuario', {
+  return await api.post('/usuario', {
     email,
     senha,
     nome,

@@ -1,11 +1,13 @@
+import { signIn } from '@/api/sign-in'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useUserStore } from '@/store'
 import { Home, LogIn, UserCheck } from 'lucide-react'
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
@@ -17,20 +19,27 @@ const signInForm = z.object({
 type SignInForm = z.infer<typeof signInForm>
 
 export function SignIn() {
+  const navigate = useNavigate()
   const location = useLocation()
   const { email } = location.state || {}
   const [inputEmail] = useState(email ?? '')
-
+  const { setUser } = useUserStore((store) => ({ setUser: store.setUser }))
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
   } = useForm<SignInForm>()
 
-  async function handleSignIn(data: SignInForm) {
-    console.log(data)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    toast.success('Login realizado com sucesso!')
+  async function handleSignIn(dados: SignInForm) {
+    try {
+      const { data } = await signIn(dados)
+      if (data) {
+        setUser({ ...data, token: undefined })
+      }
+      navigate('/')
+    } catch {
+      toast.error('Erro ao realizar seu login.')
+    }
   }
 
   function getWarningEmailInvalid() {
